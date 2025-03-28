@@ -73,7 +73,7 @@ Shell scripts created in Windows often have `CRLF` line endings, which cause iss
 > Then in a second WSL terminal window, you can run below commands to start your 📱 frontend:
 
 ```sh
-cd speedrun-rust ( if not done )
+cd speedrun_stylus ( if not done )
 cd packages ( if not done )
 cd nextjs
 yarn run dev OR yarn dev
@@ -120,7 +120,7 @@ The interface allows you to:
 
 ![image](https://github.com/user-attachments/assets/d84c4d6a-be20-426b-9c68-2c021caefb29)
 
-The above command will automatically deploy the contract functions written inside `speedrun-rust/packages/stylus-demo/src/lib.rs`
+The above command will automatically deploy the contract functions written inside `speedrun_stylus/packages/stylus-demo/src/lib.rs`
 
 > This local account will deploy your contracts, allowing you to avoid entering a personal private key because the deployment happens using the pre-funded account's private key.
 
@@ -166,6 +166,4 @@ cargo stylus deploy -e http://127.0.0.1:8547 --private-key "$your_private_key"
 ---
 
 
-> 🏃 Head to your next challenge [here](https://github.com/abhi152003/speedrun-rust).
-
-> 💬 Problems, questions, comments on the stack? Post them to the [🏗 scaffold-eth developers chat](https://t.me/joinchat/F7nCRK3kI93PoCOk)
+> 🏃 Head to your next challenge [here](https://github.com/abhi152003/speedrun_stylus).
