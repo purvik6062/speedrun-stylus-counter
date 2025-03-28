@@ -19,8 +19,8 @@ Then download the challenge to your computer and install dependencies by running
 > ⚠️ IMPORTANT: Please make sure to run the below commands through WSL only. In PowerShell, you'll get an error because some files are not supported on Windows.
 
 ```sh
-git clone https://github.com/abhi152003/speedrun-rust
-cd speedrun-rust
+git clone https://github.com/abhi152003/speedrun_stylus.git
+cd speedrun_stylus
 git checkout counter
 yarn install
 ```
@@ -30,7 +30,7 @@ yarn install
 Contracts will be deployed through the cargo stylus command using the pre-funded account's private key so users can perform any transaction through the frontend while interacting with the contract.
 
 ```sh
-cd speedrun-rust # if not done
+cd speedrun_stylus # if not done
 cd packages
 cd stylus-demo
 ```
