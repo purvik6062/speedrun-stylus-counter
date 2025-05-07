@@ -1,28 +1,33 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { formatEther, createPublicClient, http } from "viem";
+import { createPublicClient, formatEther, http } from "viem";
 import { Address } from "~~/components/scaffold-eth";
 
 const client = createPublicClient({
   chain: {
     id: 412346,
-    name: 'Local Nitro',
-    network: 'nitro-local',
+    name: "Local Nitro",
+    network: "nitro-local",
     nativeCurrency: {
       decimals: 18,
-      name: 'Ethereum',
-      symbol: 'ETH',
+      name: "Ethereum",
+      symbol: "ETH",
     },
     rpcUrls: {
-      default: { http: ['http://localhost:8547'] },
-      public: { http: ['http://localhost:8547'] },
+      default: { http: ["http://localhost:8547"] },
+      public: { http: ["http://localhost:8547"] },
     },
   },
-  transport: http()
+  transport: http(),
 });
 
-export const AddressComponent = ({ address }: { address: string }) => {
+export const AddressComponent = ({
+  address,
+}: {
+  address: string;
+  contractData?: { bytecode: string; assembly: string } | null;
+}) => {
   const [balance, setBalance] = useState<string>();
   const [nonce, setNonce] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
@@ -65,7 +70,7 @@ export const AddressComponent = ({ address }: { address: string }) => {
             <span className="text-lg font-semibold">Address:</span>
             <Address address={address} format="long" />
           </div>
-          
+
           <div className="flex flex-col gap-2">
             <span className="text-lg font-semibold">Balance:</span>
             <span className="font-mono">{balance} ETH</span>
