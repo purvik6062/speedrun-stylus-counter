@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ICounter } from "./ICounter";
 import { ethers } from "ethers";
 
+//deployed contract address
 const contractAddress = "0xa6e41ffd769491a42a6e5ce453259b93983a22ef";
 const provider = new ethers.JsonRpcProvider("http://localhost:8547/");
 const privateKey = "0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659";
